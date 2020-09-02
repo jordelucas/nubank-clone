@@ -31,6 +31,7 @@ export default createGlobalStyle`
     --light-gray: #E5E5E5;
     --white: #fff;
     --light-blue: #66CFFF;
+    --light-purple: rgba(129,37,157,.5);
     --free: #A5CC25;
     --current: #00BCC9;
     --future: #FFCF5A;

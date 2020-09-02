@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { ArrowDropDown } from '@styled-icons/material'
 
 export const Container = styled.div`
   height: 100%;
@@ -81,8 +83,8 @@ export const Contacts = styled.div`
   > span {
     font-size: 12px;
     line-height: 64px;
-    margin-left: 10px;
-    color: var(--light-blue)
+    margin-left: 5px;
+    color: var(--light-blue);
   }
 
   &:hover {
@@ -97,45 +99,64 @@ export const SupportIcon = styled.img``
 
 export const CreditUsed = styled.div`
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   height: 100%;
-  padding: 5px 26px;
+
+  padding: 8px 13px;
   border-left: 1px solid var(--light-gray);
   border-right: 1px solid var(--light-gray);
   
-  > div {
-    width: 12px;
-    background: #000;
-    
-    &:nth-child(1) {
-      background: var(--future);
-      color: var(--future);
-      height: 56%;
-    }
+  > div.limit {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    margin-right: 8px;
 
-    &:nth-child(2) {
-      background: var(--current);
-      color: var(--current);
-      height: 33%;
-    }
-    
-    &:nth-child(3) {
-      background: var(--free);
-      color: var(--free);
-      height: 11%;
+    > div {
+      width: 12px;
+      background: #000;
+      
+      &:nth-child(1) {
+        background: var(--future);
+        color: var(--future);
+        height: 56%;
+      }
+
+      &:nth-child(2) {
+        background: var(--current);
+        color: var(--current);
+        height: 33%;
+      }
+      
+      &:nth-child(3) {
+        background: var(--free);
+        color: var(--free);
+        height: 11%;
+      }
     }
   }
 
+  > svg {
+    fill: var(--light-purple);
+  }
 `
 
 export const UserInfo = styled.div`
+  display: flex;
+  align-items: center;
   padding: 0 21px;
   cursor: pointer;
 
   > span {
     font-size: 14px;
     line-height: 64px;
-    color: var(--nubank)
+    color: var(--nubank);
+    margin-right: 8px;
+  }
+
+  > svg {
+    fill: var(--light-purple);
   }
 
   &:hover {
@@ -145,3 +166,20 @@ export const UserInfo = styled.div`
     }
   }
 `
+
+const IconsCSS = css`
+  width: 22px;
+  height: 22px;
+`
+
+export const ArrowDropDownIcon = styled(ArrowDropDown)`${IconsCSS}`;
+
+/* MONTHSBAR */
+
+export const MonthsBar = styled.div``
+
+export const Wrapper = styled.div``
+
+export const Info = styled.div``
+
+export const List = styled.div``
