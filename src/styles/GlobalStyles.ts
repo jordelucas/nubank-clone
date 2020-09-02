@@ -26,7 +26,13 @@ export default createGlobalStyle`
 
   :root {
     --primary: rgba(252,252,252,.97);
-    --gray: #404040;
     --nubank: #81259D;
+    --gray: #404040;
+    --light-gray: #E5E5E5;
+    --white: #fff;
+    --light-blue: #66CFFF;
+    --free: #A5CC25;
+    --current: #00BCC9;
+    --future: #FFCF5A;
   }
 `
