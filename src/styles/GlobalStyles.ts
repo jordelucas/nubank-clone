@@ -30,6 +30,8 @@ export default createGlobalStyle`
     --gray: #404040;
     --light-gray: #E5E5E5;
     --white: #fff;
+    --active-white: rgba(255,255,255,.08);
+    --hover-white: rgba(235,235,235,.04);
     --light-blue: #66CFFF;
     --light-purple: rgba(129,37,157,.5);
     --free: #A5CC25;
