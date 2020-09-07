@@ -6,6 +6,11 @@ interface ItemProps {
   isActive?: Boolean;
 }
 
+interface DropdownItemProps {
+  unlock?: Boolean;
+  noLink?: Boolean;
+}
+
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
@@ -72,6 +77,7 @@ export const Contacts = styled.div`
   display: flex;
   align-items: center;
   padding: 0 16px;
+  position: relative;
   cursor: pointer;
 
   > span {
@@ -86,6 +92,10 @@ export const Contacts = styled.div`
 
     > span {
       color: var(--nubank);
+    }
+
+    > ul {
+      display: flex;
     }
   }
 `
@@ -149,6 +159,7 @@ export const UserInfo = styled.div`
   display: flex;
   align-items: center;
   padding: 0 21px;
+  position: relative;
   cursor: pointer;
 
   > span {
@@ -164,7 +175,113 @@ export const UserInfo = styled.div`
 
   &:hover {
     background: var(--white);
+    
     > span {
+      color: var(--nubank);
+    }
+
+    > ul {
+      display: flex;
+    }
+  }
+`
+
+export const Dropdown = styled.ul`
+  min-width: 100%;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  right: 0px;
+  z-index: 1000;
+  
+  background-color: var(--white);
+  box-shadow: 0 0px 9px rgba(0, 0, 0, 0.1);
+
+  list-style: none;
+`
+
+export const DropdownItem = styled.li<DropdownItemProps>`
+  width: 100%;
+  padding: 0 21px;
+  
+  border-bottom: 1px solid var(--light-gray);
+  background-color: var(--primary);
+  transition: background-color 0.1s;
+
+  > a {
+    font-size: 12px;        
+    line-height: 64px;
+    text-transform: uppercase;
+    color: var(--light-gray-text);
+    text-decoration: none;
+    
+    transition: color 0.1s;
+  }
+
+  ${({ unlock }) => unlock && `
+    padding: 16px 21px;
+    cursor: default;
+
+    > button {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      font-size: 11px;
+      color: var(--white);
+      background-color: var(--nubank);
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      transition: opacity 0.3s;
+
+      > svg {
+        width: 14px;
+        fill: var(--white);
+        margin-right: 6px;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  `}
+  
+  ${({ noLink }) => noLink && `
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+
+    > legend {
+      font-size: 16px;        
+      line-height: 64px;
+      color: var(--light-gray-text);
+    }
+
+    > div {
+      display: flex;
+      flex-direction: column;
+
+      margin-bottom: 24px;
+
+      > span {
+        font-size: 12px;
+        color: var(--light-gray-text);
+        margin-bottom: 5px;
+      }
+
+      > small {
+        font-size: 12px;
+
+        margin-bottom: 5px;
+      }
+    }
+  `}
+  
+  &:hover { 
+    background-color: var(--hover-white);
+
+    > a {
       color: var(--nubank);
     }
   }
