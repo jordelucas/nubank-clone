@@ -3,11 +3,11 @@ import React from 'react';
 import Header from '../Header';
 import MonthsBar from '../MonthsBar';
 import InvoiceInfo from '../InvoiceInfo';
+import ShoppingList from '../ShoppingList';
 
 import { 
   Container,
-  Wrapper,  
-  List } from './styles';
+  Wrapper } from './styles';
 
 const Layout: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Layout: React.FC = () => {
 
       <Wrapper>
         <InvoiceInfo />
-        <List />
+        <ShoppingList />
       </Wrapper>
       
     </Container>

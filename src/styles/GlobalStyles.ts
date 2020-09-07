@@ -29,6 +29,7 @@ export default createGlobalStyle`
     --nubank: #81259D;
     --gray: #404040;
     --light-gray: #E0E0E0;
+    --light-gray-text: #a0a0a0;
     --white: #fff;
     --active-white: rgba(255,255,255,.08);
     --hover-white: rgba(235,235,235,.04);
