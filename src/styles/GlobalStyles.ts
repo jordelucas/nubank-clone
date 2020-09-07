@@ -25,10 +25,10 @@ export default createGlobalStyle`
   }
 
   :root {
-    --primary: rgba(252,252,252,.97);
+    --primary: #f0f0f0;
     --nubank: #81259D;
     --gray: #404040;
-    --light-gray: #E5E5E5;
+    --light-gray: #E0E0E0;
     --white: #fff;
     --active-white: rgba(255,255,255,.08);
     --hover-white: rgba(235,235,235,.04);
@@ -37,5 +37,8 @@ export default createGlobalStyle`
     --free: #A5CC25;
     --current: #00BCC9;
     --future: #FFCF5A;
+    --free-card: #7ED321;
+    --current-card: #40AAB9;
+    --future-card: #F5A623;
   }
 `

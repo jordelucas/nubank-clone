@@ -2,11 +2,11 @@ import React from 'react';
 
 import Header from '../Header';
 import MonthsBar from '../MonthsBar';
+import InvoiceInfo from '../InvoiceInfo';
 
 import { 
   Container,
-  Wrapper, 
-  Info, 
+  Wrapper,  
   List } from './styles';
 
 const Layout: React.FC = () => {
@@ -17,9 +17,10 @@ const Layout: React.FC = () => {
       <MonthsBar />
 
       <Wrapper>
-        <Info />
+        <InvoiceInfo />
         <List />
       </Wrapper>
+      
     </Container>
   );
 };
