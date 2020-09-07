@@ -37,7 +37,14 @@ const Header: React.FC = () => {
         <Contacts>
           <SupportIcon src={Support} alt="Icone de atendimento"/>
           <span>ATENDIMENTO</span>
+
+          <Dropdown>
+            <DropdownItem><a href="#">Dúvidas Frequentes</a></DropdownItem>
+            <DropdownItem><a href="#">0800 591 2117</a></DropdownItem>
+            <DropdownItem><a href="#">meajuda@nubank.com.br</a></DropdownItem>
+          </Dropdown>
         </Contacts>
+
         <CreditUsed>
           <div className="limit">
             <div>.</div>
@@ -46,6 +53,7 @@ const Header: React.FC = () => {
           </div>
           <ArrowDropDownIcon />
         </CreditUsed>
+        
         <UserInfo>
           <span>Jordevá Lucas Santos da Silva</span>
           <ArrowDropDownIcon />
