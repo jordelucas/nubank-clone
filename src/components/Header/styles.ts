@@ -103,55 +103,114 @@ export const Contacts = styled.div`
 export const SupportIcon = styled.img``
 
 export const CreditUsed = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   height: 100%;
   width: 70px;
 
-  padding: 8px 13px;
   border-left: 1px solid var(--light-gray);
   border-right: 1px solid var(--light-gray);
-  
+
   transition: width 0.3s, height 0.3s;
+
+  position: relative;
 
   &:hover {
     width: 208px;
-    height: 384px;
   }
+`
 
-  > div.limit {
+export const DropdownCredit = styled.div`
+  height: 100%;
+  width: 70px;
+  padding: 8px 13px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2000;
+  
+  display: flex;
+  justify-content: flex-end;
+  
+  transition: width 0.3s, height 0.3s, background 0.3s;
+
+  > div.limits {
     display: flex;
     flex-direction: column;
     height: 100%; 
+    width: 100%;
     margin-right: 8px;
 
     > div {
-      width: 12px;
-      background: #000;
+      display: flex;
+      justify-content: flex-end;
       
-      &:nth-child(1) {
-        background: var(--future);
-        color: var(--future);
-        height: 56%;
+      > small {
+        font-size: 11px;
       }
 
-      &:nth-child(2) {
+      > span {
+        font-size: 16px;
+      }
+
+      > main {
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+
+        margin-right: 10px;
+      } 
+    }
+
+    .future {
+      height: 56%;
+
+      .barra {
+        background: var(--future);
+        color: var(--future);
+        height: 100%;
+        width: 12px;
+      }
+    }
+
+    .current {
+      height: 33%;
+
+      .barra {
         background: var(--current);
         color: var(--current);
-        height: 33%;
+        height: 100%;
+        width: 12px;
       }
-      
-      &:nth-child(3) {
+    } 
+
+    .free {
+      height: 11%;
+
+      .barra {
         background: var(--free);
         color: var(--free);
-        height: 11%;
+        height: 100%;
+        width: 12px;
       }
     }
   }
 
   > svg {
+    margin-top: 13px;
     fill: var(--light-purple);
+  } 
+
+  &:hover {
+    width: 208px;
+    height: 384px;
+
+    background: var(--white);
+    box-shadow: 0 0px 9px rgba(0, 0, 0, 0.1);
+
+    
+    div.limits div main {
+      display: flex;
+    }
   }
 `
 

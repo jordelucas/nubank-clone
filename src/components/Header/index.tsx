@@ -7,7 +7,8 @@ import {
   Item, 
   Contacts, 
   SupportIcon, 
-  CreditUsed, 
+  CreditUsed,
+  DropdownCredit, 
   UserInfo,
   ArrowDropDownIcon,
   Dropdown,
@@ -46,12 +47,34 @@ const Header: React.FC = () => {
         </Contacts>
 
         <CreditUsed>
-          <div className="limit">
-            <div>.</div>
-            <div>.</div>
-            <div>.</div>
-          </div>
-          <ArrowDropDownIcon />
+          <DropdownCredit className="">
+            <div className="limits">
+              <div className="future">
+                <main>
+                  <small>Próximas faturas</small>
+                  <span>R$ 2.000,00</span>
+                </main>
+                <div className="barra">.</div>
+              </div>
+              
+              <div className="current">
+                <main>
+                  <small>Fatura atual</small>
+                  <span>R$ 2.000,00</span>
+                </main>
+                <div className="barra">.</div>
+              </div>
+              
+              <div className="free">
+                <main>
+                  <small>Limite disponível</small>
+                  <span>R$ 2.000,00</span>
+                </main>
+                <div className="barra">.</div>
+              </div>
+            </div>
+            <ArrowDropDownIcon />
+          </DropdownCredit>
         </CreditUsed>
         
         <UserInfo>
